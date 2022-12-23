@@ -1,3 +1,4 @@
+require "user.config"
 require "user.impatient"
 require "user.options"
 require "user.keymaps"
@@ -19,4 +20,6 @@ require "user.illuminate"
 require "user.indentline"
 require "user.alpha"
 require "user.lsp"
-require "user.dap"
+if meinvim.use_dap then
+  require "user.dap"
+end
