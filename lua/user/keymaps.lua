@@ -97,4 +97,5 @@ keymap("n", "<leader>tf", "<cmd>ToggleTerm<cr>", opts)
 if meinvim.use_custom_keymap then
 	keymap("n", "<leader>w", ":w<cr>", opts)
 	keymap("n", "<leader>q", ":q<cr>", opts)
+	keymap("n", "<leader>c", "<cmd>Bdelete!<CR>", opts)
 end
