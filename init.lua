@@ -1,3 +1,4 @@
+require "config"
 require "options"
 require "keymaps"
 require "Lazy"
