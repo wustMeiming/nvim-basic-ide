@@ -57,9 +57,12 @@ keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 
 -- Telescope
 keymap("n", "<leader>ff", ":Telescope find_files<CR>", opts)
-keymap("n", "<leader>ft", ":Telescope live_grep<CR>", opts)
+keymap("n", "<leader>fg", ":Telescope live_grep<CR>", opts)
 keymap("n", "<leader>fp", ":Telescope projects<CR>", opts)
 keymap("n", "<leader>fb", ":Telescope buffers<CR>", opts)
+keymap("n", "<leader>fo", ":Telescope oldfiles<CR>", opts)
+keymap("n", "<leader>sw", ":Telescope current_buffer_fuzzy_find<CR>", opts)
+keymap("n", "<leader>sk", ":Telescope keymaps<CR>", opts)
 
 -- Git
 keymap("n", "<leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)
@@ -83,6 +86,12 @@ end
 
 -- Lsp
 keymap("n", "<leader>lf", "<cmd>lua vim.lsp.buf.format{ async = true }<cr>", opts)
+
+-- terminal
+keymap("n", "<F7>", "<cmd>ToggleTerm<cr>", opts)
+keymap("t", "<F7>", "<cmd>ToggleTerm<cr>", opts)
+keymap("n", "<leader>tb", "<cmd>ToggleTerm size=10 direction=horizontal<cr>", opts)
+keymap("n", "<leader>tf", "<cmd>ToggleTerm<cr>", opts)
 
 -- custom
 if meinvim.use_custom_keymap then
