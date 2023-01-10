@@ -7,7 +7,9 @@ require "user.autocommands"
 require "user.colorscheme"
 require "user.cmp"
 require "user.telescope"
-require "user.gitsigns"
+if meinvim.use_gitsigns then
+  require "user.gitsigns"
+end
 require "user.treesitter"
 require "user.autopairs"
 require "user.comment"
