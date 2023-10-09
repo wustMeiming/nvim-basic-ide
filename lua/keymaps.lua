@@ -6,6 +6,8 @@ local sections = {
   f = { desc = "󰭎 Telescope" },
   g = { desc = "󰊢 Git" },
   l = { desc = " LSP" },
+  s = { desc = " Search" },
+  t = { desc = " Terminal" },
 }
 
 -- Standart --
@@ -96,9 +98,24 @@ maps.n["<leader>lf"] = { "<cmd>lua vim.lsp.buf.format{ async = true }<cr>", desc
 
 -- custom
 if meinvim.use_custom_keymap then
+  -- fast save & fast quit
   maps.n["<leader>w"] = { ":w<cr>", desc = "Save"}
   maps.n["<leader>q"] = { ":q<cr>", desc = "Quit"}
+
   maps.n["<leader>c"] = { "<cmd>Bdelete!<CR>", desc = "Close Buffer"}
+
+  -- terminal
+  maps.n["<F7>"]= { "<cmd>ToggleTerm<cr>", desc="Toggle Term" }
+  maps.t["<F7>"]= { "<cmd>ToggleTerm<cr>", desc="Toggle Term" }
+  maps.n["<leader>t"] = sections.t
+  maps.n["<leader>tb"] = {"<cmd>ToggleTerm size=10 direction=horizontal<cr>", desc = "horizontal term"}
+  maps.n["<leader>tf"] = {"<cmd>ToggleTerm", desc = "vertical term"}
+
+  -- Telescope
+  maps.n["<leader>fo"] = { ":Telescope oldfiles<cr>", desc = "recent files"}
+  maps.n["<leader>fk"] = { ":Telescope keymaps<cr>", desc = "keymaps"}
+  maps.n["<leader>s"] = sections.s
+  maps.n["<leader>sw"] = { ":Telescope current_buffer_fuzzy_find<cr>", desc = "search current buffer"}
 end
 
 utils.set_mappings(maps)
