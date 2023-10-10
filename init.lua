@@ -1,4 +1,4 @@
-require "config"
+require "myconfig"
 require "options"
 require "keymaps"
 require "Lazy"
