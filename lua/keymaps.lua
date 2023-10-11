@@ -102,7 +102,7 @@ if meinvim.use_custom_keymap then
   maps.n["<leader>w"] = { ":w<cr>", desc = "Save"}
   maps.n["<leader>q"] = { ":q<cr>", desc = "Quit"}
 
-  maps.n["<leader>c"] = { "<cmd>Bdelete!<CR>", desc = "Close Buffer"}
+  -- maps.n["<leader>c"] = { "<cmd>Bdelete!<CR>", desc = "Close Buffer"}
 
   -- terminal
   maps.n["<F7>"]= { "<cmd>ToggleTerm<cr>", desc="Toggle Term" }
