@@ -109,7 +109,7 @@ if meinvim.use_custom_keymap then
   maps.t["<F7>"]= { "<cmd>ToggleTerm<cr>", desc="Toggle Term" }
   maps.n["<leader>t"] = sections.t
   maps.n["<leader>tb"] = {"<cmd>ToggleTerm size=10 direction=horizontal<cr>", desc = "horizontal term"}
-  maps.n["<leader>tf"] = {"<cmd>ToggleTerm", desc = "vertical term"}
+  maps.n["<leader>tf"] = {"<cmd>ToggleTerm<cr>", desc = "vertical term"}
 
   -- Telescope
   maps.n["<leader>fo"] = { ":Telescope oldfiles<cr>", desc = "recent files"}
